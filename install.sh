@@ -31,6 +31,8 @@ CompareVersion() {
     return 0
 }
 
+export tmp=/TEMP
+
 #Get into the installation path /root/
 cd /TEMP/
 currentpath=`pwd`

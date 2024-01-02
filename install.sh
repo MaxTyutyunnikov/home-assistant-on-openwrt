@@ -32,9 +32,9 @@ CompareVersion() {
 }
 
 #Get into the installation path /root/
-cd /root/
+cd /TEMP/
 currentpath=`pwd`
-if [ "$currentpath" != "/root" ]; then
+if [ "$currentpath" != "/TEMP" ]; then
     echo -e "\033[31m ERROR! Cannot get into installation path, exit. \033[0m"
     exit 0
 fi

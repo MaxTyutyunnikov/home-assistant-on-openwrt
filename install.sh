@@ -141,11 +141,11 @@ fi
 echo -e "\033[32m Install C library......libffi \033[0m"
 mkdir -p /usr/include/ffi && \
 cp ./home-assistant-on-openwrt/ffi* /usr/include/ffi && \
-ln -s /usr/lib/libffi.so.6.0.1 /usr/lib/libffi.so
+ln -sf /usr/lib/libffi.so.8.1.0 /usr/lib/libffi.so
 echo -e "\033[32m Install C library......libopenssl \033[0m"
 cp -r ./home-assistant-on-openwrt/openssl /usr/include/python3.11/ && \
-ln -s /usr/lib/libcrypto.so.1.0.0 /usr/lib/libcrypto.so && \
-ln -s /usr/lib/libssl.so.1.0.0 /usr/lib/libssl.so
+ln -sf /usr/lib/libcrypto.so.3 /usr/lib/libcrypto.so && \
+ln -sf /usr/lib/libssl.so.3 /usr/lib/libssl.so
 echo -e "\033[32m Install C library......libsodium \033[0m"
 opkg install libsodium
 if [ $? -ne 0 ]; then
@@ -154,7 +154,7 @@ if [ $? -ne 0 ]; then
 fi
 cp ./home-assistant-on-openwrt/sodium.h /usr/include/python3.11/ && \
 cp -r ./home-assistant-on-openwrt/sodium /usr/include/python3.11/ && \
-ln -s /usr/lib/libsodium.so.23.1.0 /usr/lib/libsodium.so
+ln -sf /usr/lib/libsodium.so.23.3.0 /usr/lib/libsodium.so
 
 #Install dependent python module
 try=0
